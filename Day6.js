@@ -355,3 +355,89 @@ for (let i = 0; i < countries.length; i++) {
 console.log(countriesWithFiveChars)
 
 // [ 'Japan', 'Kenya' ]
+
+
+
+const webTechs = [
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'React',
+  'Redux',
+  'Node',
+  'MongoDB'
+]
+
+
+//Task_11
+
+let webTechsLength = [];
+for (let i = 0; i < webTechs.length; i++) {
+    webTechsLength.push(webTechs[i].length);
+}
+console.log(webTechsLength);
+
+/*
+[
+  4, 3, 10, 5,
+  5, 4,  7
+]
+*/
+
+
+
+//Task_12
+
+let newWebTechs = [];
+for (let i = 0; i < webTechs.length; i++) {
+    newWebTechs.push([webTechs[i], webTechs[i].length])
+}
+console.log(newWebTechs)
+
+/*
+[
+  [ 'HTML', 4 ],
+  [ 'CSS', 3 ],
+  [ 'JavaScript', 10 ],
+  [ 'React', 5 ],
+  [ 'Redux', 5 ],
+  [ 'Node', 4 ],
+  [ 'MongoDB', 7 ]
+]
+*/
+
+
+
+//Task_13
+
+let mernStack = ["MongoDb", "Express", "React", "Node"]
+let mern = " ";
+for (let i = 0; i < mernStack.length; i++) {
+    mern += mernStack[i].slice(0, 1);
+}
+console.log(mern);
+//  MERN
+
+//Task_15
+
+let fruits = ['banana', 'orange', 'mango', 'lemon'];
+for (let i = fruits.length - 1; i >= 0; i--) {
+    console.log(fruits[i]);
+}
+
+/*
+lemon
+mango
+orange
+banana
+*/
+
+//Task_16
+const fullStack = [
+  ['HTML', 'CSS', 'JS', 'React'],
+  ['Node', 'Express', 'MongoDB']
+]
+
+for (let i = fullStack.length - 1; i >= 0; i--) {
+    console.log(fullStack[i]);
+}
