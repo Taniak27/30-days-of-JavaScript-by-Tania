@@ -172,3 +172,186 @@ for (let b = 0; b < 6; b++) {
 }
 console.log(randomChars)
 // ABoxTv
+
+
+//LEVEL_2
+
+//Task_1
+
+let chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+let r = Math.floor(Math.random() * chars.length);
+let randChars = "";
+for (let i = 0; i < r; i++) {
+    let random = Math.floor(Math.random() * chars.length);
+    randChars += chars[random];
+}
+console.log(randChars);
+
+// 0iUMmnSw1OlfeRW
+// rmW4L
+// AKQSJGTEJCafXAByT3FB2T8kRc4ekkle68ofovN5wBSmeoJMDgE8
+
+
+//Task_2
+
+let result = "";
+let hexChar = "0123456789abcdef";
+for (var j = 0; j < 6; j++) {
+  result += hexChar.charAt(Math.floor(Math.random() * hexChar.length));
+}
+console.log(`"#${result}"`);
+// "#f5bbd7"
+
+
+//Task_3
+
+function randomRGB() {
+  var x = Math.floor(Math.random() * 256);
+  var y = Math.floor(Math.random() * 256);
+  var z = Math.floor(Math.random() * 256);
+  var RGBColor = "rgb(" + x + "," + y + "," + z + ")";  
+  console.log(RGBColor);
+}
+randomRGB();
+
+
+
+
+const countries = [
+  'Albania',
+  'Bolivia',
+  'Canada',
+  'Denmark',
+  'Ethiopia',
+  'Finland',
+  'Germany',
+  'Hungary',
+  'Ireland',
+  'Japan',
+  'Kenya'
+]
+
+
+//Task_4
+
+let newCountries = countries.map(element => {
+  return element.toUpperCase();
+});
+console.log(newCountries);
+/*
+[
+  'ALBANIA',  'BOLIVIA',
+  'CANADA',   'DENMARK',
+  'ETHIOPIA', 'FINLAND',
+  'GERMANY',  'HUNGARY',
+  'IRELAND',  'JAPAN',
+  'KENYA'
+]
+*/
+
+
+//Task_5
+
+let countriesCharLength = [];
+for (let i = 0; i < countries.length; i++) {
+    countriesCharLength.push(countries[i].length);
+}
+console.log(countriesCharLength);
+
+// [
+//  7, 7, 6, 7, 8,
+//  7, 7, 7, 7, 5,
+//  5
+//]
+
+
+//Task_6
+
+let countries = ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"];
+let newCountries = [];
+for (let i = 0; i < countries.length; i++) {
+    newCountries.push([countries[i], countries[i].slice(0, 3), countries[i].length])
+}
+console.log(newCountries)
+let countWithoutLand = []
+let countWithLand = []
+for (let i = 0; i < countries.length; i++) {
+    if (countries[i].includes("LAND")) {
+        countWithLand.push(countries[i]);
+    } else {
+        countWithoutLand.push(countries[i])
+    }
+}
+
+/*
+[
+  [ 'ALBANIA', 'ALB', 7 ],
+  [ 'BOLIVIA', 'BOL', 7 ],
+  [ 'CANADA', 'CAN', 6 ],
+  [ 'DENMARK', 'DEN', 7 ],
+  [ 'ETHIOPIA', 'ETH', 8 ],
+  [ 'FINLAND', 'FIN', 7 ],
+  [ 'GERMANY', 'GER', 7 ],
+  [ 'HUNGARY', 'HUN', 7 ],
+  [ 'IRELAND', 'IRE', 7 ],
+  [ 'JAPAN', 'JAP', 5 ],
+  [ 'KENYA', 'KEN', 5 ]
+]
+*/
+
+
+
+//Task_7
+
+let countWithLand1 = []
+let countWithoutLand1 = []
+for (let j = 0; j < countries.length; j++) {
+    if (countries[j].includes("land")) {
+        countWithLand1.push(countries[j]);
+    } else {
+        countWithoutLand1.push(countries[j])
+    }
+}
+
+console.log(`countries with "Land" ${countWithLand1}`);
+// countries with "Land" Finland,Ireland
+
+
+
+//Task_8
+
+let countWithIa = []
+for (let i = 0; i < countries.length; i++) {
+    if (countries[i].includes("IA")) {
+        countWithIa.push(countries[i]);
+    } else {
+        countWithoutIa.push(countries[i])
+    }
+}
+
+console.log(`countries with "ia" ${countWithIa}`);
+
+// countries with "ia" ALBANIA,BOLIVIA,ETHIOPIA
+
+
+
+ //Task_9
+     
+ let longest = countries.sort((a,b) => b.length - a.length)[0];
+     
+ console.log(longest);
+// Ethiopia
+
+
+
+//Task_10
+
+let countriesWithFiveChars = [];
+for (let i = 0; i < countries.length; i++) {
+    if (countries[i].length === 5) {
+        countriesWithFiveChars.push(countries[i])
+    }
+}
+console.log(countriesWithFiveChars)
+
+// [ 'Japan', 'Kenya' ]
