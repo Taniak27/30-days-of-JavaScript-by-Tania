@@ -433,11 +433,108 @@ banana
 */
 
 //Task_16
+/*
 const fullStack = [
   ['HTML', 'CSS', 'JS', 'React'],
   ['Node', 'Express', 'MongoDB']
 ]
-
-for (let i = fullStack.length - 1; i >= 0; i--) {
-    console.log(fullStack[i]);
+for (const tech of fullStack) {
+  console.log(tech);
 }
+*/
+
+//LEVEL_3
+
+//Task_1-2
+const countries = [
+  'Albania',
+  'Bolivia',
+  'Canada',
+  'Denmark',
+  'Ethiopia',
+  'Finland',
+  'Germany',
+  'Hungary',
+  'Ireland',
+  'Japan',
+  'Kenya'
+]
+
+const countriesCopy = [...countries];
+console.log(countriesCopy);
+
+const countriesCopy1 = [...countries];
+const sortedCountries = countriesCopy1.sort();
+console.log(sortedCountries);
+/*
+[
+  'Albania',  'Bolivia',
+  'Canada',   'Denmark',
+  'Ethiopia', 'Finland',
+  'Germany',  'Hungary',
+  'Ireland',  'Japan',
+  'Kenya'
+]
+*/
+
+
+//Task_3
+const webTechs1 = [
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'React',
+  'Redux',
+  'Node',
+  'MongoDB'
+]
+
+const sortedWebTechs = webTechs1.sort();
+console.log(sortedWebTechs);
+// [ 'CSS', 'HTML', 'JavaScript', 'MongoDB', 'Node', 'React', 'Redux' ]
+
+
+//Task_4
+const landCountries = countries.filter(country => country.toLowerCase().includes('land'));
+console.log(landCountries);
+// [ 'Finland', 'Ireland' ]
+
+
+//Task_5
+const longestCountry = countries.reduce((a, b) => a.length > b.length ? a : b);
+console.log(longestCountry);
+// Ethiopia
+
+
+//Task_6
+const landCountries2 = countries.filter(country => country.toLowerCase().includes('land'));
+console.log(landCountries2);
+// [ 'Finland', 'Ireland' ]
+
+
+
+//Task_7
+const fourLettersCountries = countries.filter(country => country.length === 4);
+console.log(fourLettersCountries);
+// []
+
+
+//Task_8
+const manyWordsCountries = countries.filter(country => country.split(' ').length > 1);
+console.log(manyWordsCountries);
+// []
+
+
+//Task_9
+const reversedCountries = countries.reverse().map(country => country.toUpperCase());
+console.log(reversedCountries);
+/*
+[
+  'KENYA',    'JAPAN',
+  'IRELAND',  'HUNGARY',
+  'GERMANY',  'FINLAND',
+  'ETHIOPIA', 'DENMARK',
+  'CANADA',   'BOLIVIA',
+  'ALBANIA'
+]
+*/
